@@ -6,10 +6,10 @@ on:
       - main
 
 env:
-  PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
-  GKE_CLUSTER: ${{ secrets.GKE_CLUSTER }}
-  GKE_ZONE: ${{ secrets.GKE_ZONE }}
-  IMAGE_NAME: gcr.io/${{ secrets.GCP_PROJECT_ID }}/python-appgke
+  PROJECT_ID: ${{ variables.GCP_PROJECT_ID }}
+  GKE_CLUSTER: ${{ variables.GKE_CLUSTER }}
+  GKE_ZONE: ${{ variables.GKE_ZONE }}
+  IMAGE_NAME: gcr.io/${{ variables.GCP_PROJECT_ID }}/python-appgke
 
 jobs:
   deploy:
